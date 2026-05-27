@@ -15,25 +15,27 @@
 }
 
 body{
+    width:100%;
     height:100vh;
     overflow:hidden;
     display:flex;
     justify-content:center;
     align-items:center;
     background:linear-gradient(135deg,#ff758c,#ff7eb3);
+    position:relative;
 }
 
 /* OPEN BOX */
 
 .box{
-    width:120px;
-    height:120px;
+    width:100px;
+    height:100px;
     background:white;
     border-radius:20px;
     display:flex;
     justify-content:center;
     align-items:center;
-    font-size:22px;
+    font-size:20px;
     font-weight:bold;
     color:#ff4f81;
     box-shadow:0 10px 30px rgba(0,0,0,0.3);
@@ -46,7 +48,7 @@ body{
     animation-delay:0s,2s;
 }
 
-/* BOX OPENING */
+/* BOX OPEN */
 
 @keyframes openBox{
 
@@ -69,7 +71,7 @@ body{
 
 }
 
-/* BOX HIDING */
+/* BOX HIDE */
 
 @keyframes hideBox{
 
@@ -88,10 +90,12 @@ body{
 
 .welcome{
     position:absolute;
-    font-size:55px;
+    text-align:center;
+    font-size:50px;
     font-weight:bold;
     color:#ff4f81;
     opacity:0;
+    padding:20px;
 
     animation:showText 2s forwards;
     animation-delay:2.2s;
@@ -129,8 +133,10 @@ body{
 }
 
 .image-box img{
-    width:80%;
+    width:90%;
     max-width:700px;
+    max-height:90vh;
+    object-fit:contain;
     border-radius:20px;
     box-shadow:0 10px 30px rgba(0,0,0,0.4);
 }
@@ -149,6 +155,28 @@ body{
 
 }
 
+/* MOBILE RESPONSIVE */
+
+@media(max-width:768px){
+
+    .welcome{
+        font-size:32px;
+        padding:15px;
+    }
+
+    .box{
+        width:80px;
+        height:80px;
+        font-size:18px;
+    }
+
+    .image-box img{
+        width:95%;
+        border-radius:15px;
+    }
+
+}
+
 </style>
 </head>
 
@@ -163,7 +191,7 @@ body{
 <!-- WELCOME TEXT -->
 
 <div class="welcome">
-    Welcome To Your Page
+    Welcome To Our Page
 </div>
 
 <!-- IMAGE -->
